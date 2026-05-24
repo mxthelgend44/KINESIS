@@ -1,0 +1,27 @@
+{
+  "name": "@kinesis/imu",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./panel": "./src/ImuPanel.tsx"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "@kinesis/tsconfig": "workspace:*",
+    "@types/react": "^18.3.12",
+    "typescript": "^5.7.2"
+  }
+}

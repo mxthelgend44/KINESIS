@@ -1,0 +1,12 @@
+{
+  "name": "@kinesis/firebase-tools",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "node seed-exercises.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.1"
+  }
+}

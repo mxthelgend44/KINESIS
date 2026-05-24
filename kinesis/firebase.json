@@ -1,0 +1,33 @@
+{
+  "firestore": {
+    "rules": "firebase/firestore.rules",
+    "indexes": "firebase/firestore.indexes.json"
+  },
+  "functions": [
+    {
+      "source": "firebase/functions",
+      "codebase": "default",
+      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run build"]
+    }
+  ],
+  "hosting": [
+    {
+      "target": "patient",
+      "source": "apps/patient",
+      "frameworksBackend": {
+        "region": "us-central1",
+        "memory": "1GiB"
+      },
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "clinician",
+      "source": "apps/clinician",
+      "frameworksBackend": {
+        "region": "us-central1",
+        "memory": "1GiB"
+      },
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    }
+  ]
+}

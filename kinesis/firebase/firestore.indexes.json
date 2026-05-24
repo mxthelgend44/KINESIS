@@ -1,0 +1,51 @@
+{
+  "indexes": [
+    { "collectionGroup": "patients", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "clinicId", "order": "ASCENDING" },
+      { "fieldPath": "createdAt", "order": "DESCENDING" }
+    ]},
+    { "collectionGroup": "sessions", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "patientId", "order": "ASCENDING" },
+      { "fieldPath": "startedAt", "order": "DESCENDING" }
+    ]},
+    { "collectionGroup": "sessions", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "patientId", "order": "ASCENDING" },
+      { "fieldPath": "isLive", "order": "ASCENDING" },
+      { "fieldPath": "startedAt", "order": "DESCENDING" }
+    ]},
+    { "collectionGroup": "sessions", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "clinicId", "order": "ASCENDING" },
+      { "fieldPath": "startedAt", "order": "DESCENDING" }
+    ]},
+    { "collectionGroup": "sessions", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "clinicId", "order": "ASCENDING" },
+      { "fieldPath": "isLive", "order": "ASCENDING" }
+    ]},
+    { "collectionGroup": "messages", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "patientId", "order": "ASCENDING" },
+      { "fieldPath": "createdAt", "order": "ASCENDING" }
+    ]},
+    { "collectionGroup": "alerts", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "clinicId", "order": "ASCENDING" },
+      { "fieldPath": "createdAt", "order": "DESCENDING" }
+    ]},
+    { "collectionGroup": "alerts", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "clinicId", "order": "ASCENDING" },
+      { "fieldPath": "status", "order": "ASCENDING" },
+      { "fieldPath": "createdAt", "order": "DESCENDING" }
+    ]},
+    { "collectionGroup": "alerts", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "patientId", "order": "ASCENDING" },
+      { "fieldPath": "createdAt", "order": "DESCENDING" }
+    ]},
+    { "collectionGroup": "prescriptions", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "patientId", "order": "ASCENDING" },
+      { "fieldPath": "active", "order": "ASCENDING" }
+    ]},
+    { "collectionGroup": "painCheckins", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "patientId", "order": "ASCENDING" },
+      { "fieldPath": "createdAt", "order": "DESCENDING" }
+    ]}
+  ],
+  "fieldOverrides": []
+}

@@ -1,0 +1,30 @@
+rules_version = '2';
+
+// ⚠️ DEV MODE — PERMISSIVE RULES ⚠️
+//
+// Every signed-in user can read and write every collection. This was set
+// during MVP development so demo flows aren't blocked by per-collection
+// permissions while the data model is still moving. /clinics is also
+// readable anonymously so the sign-up form can validate invite codes
+// before the user has an auth account.
+//
+// BEFORE PRODUCTION: restore the role-based rules previously kept in
+// this file's git history — per-collection clinic-membership checks,
+// patient-self-access, append-only constraints on samples/logs, etc.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Anonymous read on /clinics so the sign-up form can resolve an
+    // invite code before the user is authenticated.
+    match /clinics/{clinicId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Everything else — open to any signed-in user.
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

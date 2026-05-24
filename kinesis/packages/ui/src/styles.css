@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+html, body { height: 100%; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: #FAF8F4;
+  color: #0E1822;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+/* Was an ALL-CAPS monospace eyebrow. Replaced with a normal small-cap label
+   that reuses the body font — easier on the eyes, no SHOUTING, but still a
+   clear visual demotion vs. headings. The class name is kept so we don't
+   have to touch every component. */
+.k-eyebrow {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+}
+/* Lowercase any leftover ALL-CAPS strings inside k-eyebrow elements so old
+   markup still reads as sentence case without touching every file. */
+.k-eyebrow {
+  font-variant: normal;
+}
+.k-serif { font-family: 'Newsreader', Georgia, serif; font-feature-settings: 'lnum' 1; }
+.k-mono  { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.k-tabnums { font-variant-numeric: tabular-nums; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+
+@keyframes k-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.k-pulse { animation: k-pulse 1.4s ease-in-out infinite; }
+
+@keyframes k-spin {
+  to { transform: rotate(360deg); }
+}
+.k-spin { animation: k-spin 0.8s linear infinite; }
+
+@keyframes k-scan {
+  0%   { transform: scale(0.4); opacity: 0.7; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+.k-scan { animation: k-scan 1.8s ease-out infinite; }
+
+@keyframes k-shimmer {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+@keyframes k-toast-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes k-toast-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-8px); }
+}

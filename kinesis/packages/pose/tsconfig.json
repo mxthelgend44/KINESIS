@@ -1,0 +1,5 @@
+{
+  "extends": "../tsconfig/library.json",
+  "compilerOptions": { "jsx": "preserve" },
+  "include": ["src"]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@kinesis/db",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./auth": "./src/auth.ts",
+    "./errors": "./src/errors.ts",
+    "./AuthProvider": "./src/AuthProvider.tsx",
+    "./types": "./src/types.ts",
+    "./queries/sessions": "./src/queries/sessions.ts",
+    "./queries/patients": "./src/queries/patients.ts",
+    "./queries/clinicians": "./src/queries/clinicians.ts",
+    "./queries/messages": "./src/queries/messages.ts",
+    "./queries/alerts": "./src/queries/alerts.ts",
+    "./queries/exercises": "./src/queries/exercises.ts",
+    "./queries/clinics": "./src/queries/clinics.ts",
+    "./queries/pain": "./src/queries/pain.ts",
+    "./queries/sample-data": "./src/queries/sample-data.ts",
+    "./queries/medications": "./src/queries/medications.ts",
+    "./queries/appointments": "./src/queries/appointments.ts",
+    "./queries/motion-captures": "./src/queries/motion-captures.ts"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "firebase": "^11.0.2",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "@kinesis/tsconfig": "workspace:*",
+    "@types/react": "^18.3.12",
+    "typescript": "^5.7.2"
+  }
+}

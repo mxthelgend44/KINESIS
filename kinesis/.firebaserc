@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "kinesis-2d856"
+  },
+  "targets": {
+    "kinesis-2d856": {
+      "hosting": {
+        "patient": ["kinesis-2d856"],
+        "clinician": ["kinesis-clinician"]
+      }
+    }
+  }
+}
